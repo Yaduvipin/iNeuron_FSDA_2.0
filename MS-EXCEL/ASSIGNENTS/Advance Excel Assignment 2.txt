@@ -1,0 +1,155 @@
+1. What does the dollar($) sign do?
+
+Ans=>The dollar sign fixes the reference to a given cell,
+ so that it remains unchanged no matter where the formula moves. 
+ In other words, using $ in cell references allows you to copy 
+ the formula in Excel without changing references.
+ example-:$B$4   $=locks column and row
+ 
+ 2. How to Change the Reference from Relative to Absolute (or Mixed)?
+ 
+ Ans=> When a formula in a cell is copied to another cell, it changes to match the new cell. 
+ In some situations, you may need to have the formula stay the same and not change, 
+ which is known as an absolute cell reference.
+
+Changing a cell from a relative to an absolute reference can be done by following the steps below: 
+
+Highlight the cell containing the formula you want to have changed to an absolute or relative reference.
+Click the formula box or highlight the formula and press the F4 key to switch between an absolute and relative cell reference.
+
+You can also highlight portions of the formula and press F4 to have a partial absolute reference.
+
+
+
+If you want to write manually or create an absolute reference, use the "$" symbol in your formula. Below is a basic example demonstrating the difference between a basic relative and absolute reference.
+
+Relative reference
+=SUM(A1:A3)
+The above basic formula is one that should be familiar to most users; it adds the values of cells A1 through A3.
+
+Absolute reference
+=SUM($A$1:$A$3)
+To change the above relative reference to an absolute reference, add a "$" symbol in front of the column and row.
+
+Partial absolute reference
+You can also create a partial absolute reference, which allows for flexibility in the formula and functionality in a spreadsheet.
+
+=SUM($A1:$A3)
+In this first example, only the column (A) is an absolute reference, while the row is a relative reference. 
+When you copy this formula to another column and row, it still references column A, but it changes the row based on where it's copied.
+
+=SUM(A$1:A$3)
+
+In this second example, only the rows (1 through 3) are an absolute reference, while the column is a relative reference.
+ When you copy this formula to another column and row, it still references rows 1 through 3,
+ but it changes the column based on where it's copied.
+
+3. Explain the order of operations in excel?
+
+Ans=> While  evaluating a formula, Excel follows a standard math protocol called "order of operations". 
+In general, Excel's order of operation follows the acronym PEMDAS (Parentheses, Exponents, Multiplication,
+ Division, Addition, Subtraction) but with some customization to handle the formula syntax in a spreadsheet. 
+
+First, any expressions in parentheses are evaluated. Parentheses essentially override 
+the normal order of operations to ensure certain operations are performed first.
+
+Next, Excel will resolve references. This involves replacing cell references like A1 with the value from the cell,
+ as well as evaluating range references like A1:A5,
+ which become arrays of values. Other range operations like union (comma) and intersection (space) also happen at this time.
+
+Next, Excel will perform exponentiation, negation, and percent conversions (in that order),
+ followed by multiplication and division, addition and subtraction, and concatenation.
+ Finally, Excel will evaluate logical operators, if present.
+
+In summary, Excel solves formulas in the following order:
+
+1.Parentheses
+2.Reference operators
+3.Exponents
+4.Negation
+5.Percent
+6.Multiplication and Division
+7.Addition and Subtraction
+8.Concatenation
+9.Logical operators
+Note: If a formula contains multiple operators with the same priority (e.g. multiplication and division,
+ or addition and subtraction), Excel will evaluate the operators from left to right.
+
+
+
+4. What, according to you, are the top 5 functions in excel and write a basic syntax
+for any of two?
+
+Ans=>According to me following are top 5 functions of Excel:
+     
+	 1. The SUM Function
+	 
+	 The syntax formula for sum function is “=SUM” (number1, number2, etc.).
+	  the sum function for the cells A1 through A7 is obtained through the formula “=SUM(A1:A7)”
+	 
+	 2. The TEXT Function
+	 
+	 The syntax formula for text function is “=TEXT” (value, format_text).
+     “Value” refers to the particular number you wish to convert to text.
+     “Format_text” defines the format of the conversion.
+	 
+	 3. The VLOOKUP Function
+	 
+	 The VLookup formula is “=VLOOKUP” (lookup_value, table_array, col_index_num, *range_lookup*).
+
+      “lookup_value” is the data you want to find.
+      “table_array” is the data column where you want to limit your search.
+      “col_index_num” is the column number within the table that you want to return a value from.
+      “range_lookup” is an optional argument that allows you to search for the exact match of your lookup value without sorting the table.
+	  
+	 4. The AVERAGE Function
+	 The syntax formula for the average function is “AVERAGE” (number1, number2, etc.).
+
+      “Number 1” refers to the first number in the range where you want the average.
+      “Number 2” is the additional reference of the average range. You can get an average of up to a maximum of 255 cells.
+       
+	   Examples:
+	   
+      “=AVERAGE (A2:A10)” – computes the average of numbers in cells A2 through A10.
+
+      “=AVERAGE (B2: B10, 7)” – computes the average of the numbers in cells B2 through B10 and the number 7.
+
+
+	 5. The CONCATENATE Function
+	 
+	 The syntax formula for the concatenate function is “CONCATENATE” (text1, [text2…text_n]),
+
+     “Text1, Text2…text_n” are the data you want to combine.
+	 
+	 
+5. When would you use the subtotal function?
+
+Ans=>The SUBTOTAL Function[1]in Excel allows users to create groups and then perform various other Excel functions such as
+ SUM, COUNT, AVERAGE, PRODUCT, MAX, etc. Thus, the SUBTOTAL function in Excel helps in analyzing the data provided.
+
+Formula
+SUBTOTAL = (method, range1, [range2 …range_n])
+
+Where method is the type of subtotal you wish to obtain
+
+Range1,range2…range_n is the range of cells you wish to subtotal
+
+Why do we need to use SUBTOTALS?
+Sometimes, we need data based on different categories. SUBTOTALS help us to get 
+the totals of several columns of data broken down into various categories.
+
+For example, let’s consider garment products of different sizes manufactured. 
+The SUBTOTAL function will help you to get a count of different sizes in your warehouse.
+
+
+6. What is the syntax of the vlookup function? Explain the terms in it?
+
+Ans=>
+	 The VLookup formula is “=VLOOKUP” (lookup_value, table_array, col_index_num, *range_lookup*).
+
+      “lookup_value” is the data you want to find.
+      “table_array” is the data column where you want to limit your search.
+      “col_index_num” is the column number within the table that you want to return a value from.
+      “range_lookup” is an optional argument that allows you to search for the exact match of your lookup value without sorting the table.
+	 
+

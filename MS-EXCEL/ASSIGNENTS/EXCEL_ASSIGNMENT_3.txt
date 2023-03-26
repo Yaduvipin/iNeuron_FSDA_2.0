@@ -1,0 +1,104 @@
+Q1.How and when to use the AutoSum command in excel?
+
+ANS=>The AutoSum command in Excel is a useful tool for quickly adding up
+ a range of cells in a worksheet. Here's how and when to use it:
+
+  Select the cell where you want the sum to appear.
+
+  Click on the AutoSum button (Σ) in the Home tab on the Ribbon.
+
+  Excel will automatically select what it thinks is the range of cells 
+  you want to add up. If it's correct, simply press Enter to complete the sum.
+
+ If the selected range is not correct, you can adjust it by clicking and
+ dragging on the cells you want to include in the sum.
+
+ Alternatively, you can manually enter the cell range for the sum by
+ typing "=SUM(" and then selecting the cells you want to add up, followed by 
+ closing the bracket with ")" and pressing Enter.
+
+ When to use AutoSum:
+
+ When you want to quickly add up a column or row of numbers without having to type out the formula manually.
+ When you need to check your calculations against a built-in Excel function.
+ When you want to save time and reduce the risk of errors in your calculations.
+ Note: AutoSum will only work if there are numbers in the cells you're trying to add up. If there are any
+ empty cells or cells with text, Excel will return an error message.
+ 
+ 
+Q2. What is the shortcut key to perform AutoSum?
+
+ANS=>The shortcut key to perform AutoSum in Excel is "Alt + =". 
+   This shortcut key will automatically select the range of cells that
+   Excel thinks you want to add up and insert the SUM formula in the selected cell.
+   If the selected range is not correct, you can adjust it by clicking and dragging on 
+   the cells you want to include in the sum, and then press Enter to complete the sum.
+   
+Q3. How do you get rid of Formula that omits adjacent cells?
+
+ANS=>If you have a formula in a cell that omits adjacent cells and you want to include those cells in the formula,
+ there are a few steps you can take:
+
+  Select the cell containing the formula that omits adjacent cells.
+  Click on the cell's formula bar at the top of the worksheet. This will allow you to edit the formula.
+   Edit the formula so that it includes the adjacent cells that were previously omitted. You can do this
+   by typing in the cell references or by using the mouse to select the cells.
+   Press Enter to save the updated formula.
+   
+   Alternatively, you can also copy the formula from the original cell and paste it into the adjacent cells that were previously omitted.
+   To do this:
+
+   Select the cell containing the formula that omits adjacent cells.
+   Press Ctrl + C (Windows) or Command + C (Mac) to copy the formula.
+   Select the adjacent cells that you want to include in the formula.
+   Right-click on the selected cells and choose "Paste Special" from the menu.
+   In the "Paste Special" dialog box, select "Formulas" and click OK.
+   This will paste the formula into the adjacent cells, including the references to the cells that were previously omitted.
+
+
+
+
+Q4. How do you select non-adjacent cells in Excel 2016?
+
+ANS=>To select non-adjacent cells in Excel 2016, follow these steps:
+
+    Click on the first cell that you want to select.
+    Hold down the Ctrl key (Windows) or Command key (Mac).
+    While holding down the Ctrl/Command key, click on each additional cell that you want to select.
+	You can click on cells that are not adjacent to each other.
+    Release the Ctrl/Command key when you have selected all the cells that you want.
+    Alternatively, you can also use the Shift key to select a range of non-adjacent cells:
+
+    Click on the first cell in the range that you want to select.
+    Hold down the Shift key.
+    While holding down the Shift key, click on the last cell in the range that you want to select.
+    Release the Shift key.
+    You can then use the Ctrl/Command key to select additional non-adjacent cells, as described in the first method.
+
+
+Q5. What happens if you choose a column, hold down the Alt key and press the letters
+    ocw in quick succession?
+	
+ANS=>If you hold down the Alt key and press the letters "ocw" in quick succession after choosing a column in a
+    Microsoft Excel spreadsheet, it will perform the following actions:
+
+   "o" - It will open the "Column Width" dialog box.
+   "c" - It will clear the contents of the selected column.
+   "w" - It will adjust the width of the column to fit the contents of the cell(s) within it.
+   So, pressing Alt + o + c + w quickly in succession will open the
+  "Column Width" dialog box, clear the contents of the selected column,
+  and adjust the column width to fit the contents of the cell(s) within it.
+
+
+Q6. If you right-click on a row reference number and click on Insert, where will the row
+    be added?
+	
+ANS=>	If you right-click on a row reference number in Excel and click on Insert, 
+   the new row will be added above the selected row.
+
+   For example, if you right-click on row 5 and select Insert, a new row will be added above row 5,
+   and the existing rows will be shifted down. The new row will become row 5, and the row that
+   was previously row 5 will become row 6, and so on.
+
+    Similarly, if you select multiple rows and then right-click and select Insert,
+	new rows will be inserted above the first selected row, and the existing rows will be shifted down accordingly.

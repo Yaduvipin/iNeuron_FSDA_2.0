@@ -1,0 +1,102 @@
+Q1. To use the ribbon commands, what menu and grouping of commands will you
+find the Insert and Delete command?
+
+ANS=>The "Insert" and "Delete" commands can be found in the "Cells" menu in the ribbon interface.
+
+   To access these commands, follow the steps below:
+
+   Select the cells or rows/columns that you want to insert or delete.
+   Click on the "Home" tab in the ribbon.
+   Look for the "Cells" group, which is typically located in the middle of the ribbon.
+   Click on either the "Insert" or "Delete" command depending on your needs.
+
+
+Q2. If you set a row height or column width to 0 (zero), what happens to the row and
+column?
+
+ANS=> In Microsoft Excel, if you set the row height or column width to 0 (zero),
+    the row or column will become hidden, but its contents will still remain in the worksheet.
+
+   To set the row height or column width to 0 (zero), follow these steps:
+
+   Select the row(s) or column(s) that you want to hide.
+   Right-click on the selected row(s) or column(s) and choose "Row Height" or "Column Width" from the context menu.
+   In the "Row Height" or "Column Width" dialog box, enter "0" (zero) in the "Height" or "Width" field.
+   Click "OK" to apply the changes.
+   After setting the row height or column width to 0 (zero), the row(s) or column(s) will become hidden from view.
+  To unhide the row(s) or column(s), you can simply set the row height or column width back to a non-zero 
+  value using the same method described above.
+
+
+Q3. Is there a need to change the height and width in a cell? Why?
+
+ANS=>Yes, there is a need to change the height and width of cells. Here are some reasons why:
+
+1.To fit the contents of the cell: Sometimes, the contents of a cell may not fit within the default size of the cell. By changing the height or width of the cell, you can ensure that all the contents of the cell are visible and not cut off.
+
+2.To improve readability: Changing the height or width of cells can help to improve the readability of a worksheet. By increasing the height of rows and the width of columns, you can make the text and numbers in the cells easier to read.
+
+3.To create a more professional-looking worksheet: By adjusting the height and width of cells, you can make your worksheet look more polished and professional. For example, you can ensure that all the cells are the same size and that the text is aligned properly.
+
+3.To make room for additional data: If you need to add more data to a worksheet, you may need to adjust the height and width of cells to make room for the new data.
+
+In summary, changing the height and width of cells  is important for ensuring that the contents of the cells are visible, improving the readability of the worksheet, creating a more professional-looking worksheet, and making room for additional data.
+
+
+Q4. What is the keyboard shortcut to unhide rows?
+
+ANS=>The keyboard shortcut to unhide rows in Microsoft Excel is as follows:
+
+   Select the rows above and below the hidden rows.
+  Press the "Shift" + "Ctrl" + "9" keys on your keyboard.
+  Alternatively, you can also use the following steps to unhide rows:
+
+  Select the rows above and below the hidden rows.
+  Right-click on the selected rows and choose "Unhide" from the context menu.
+  Note that this method will only work if there are hidden rows in the selected range. 
+  If there are hidden columns, you can use the "Shift" + "Ctrl" + "0" keyboard shortcut or the "Unhide" command from the context menu after selecting the columns to unhide them.
+
+
+Q5. How to hide rows containing blank cells?
+
+ANS=>To hide rows containing blank cells , you can use the following steps:
+
+Select the rows that you want to check for blank cells.
+Click on the "Home" tab in the ribbon.
+Click on the "Conditional Formatting" button in the "Styles" group and select "New Rule" from the drop-down menu.
+In the "New Formatting Rule" dialog box, select "Use a formula to determine which cells to format."
+In the "Format values where this formula is true" field, enter the following formula: =COUNTBLANK($A1:$Z1)>0 (replace $A1:$Z1 with the range of cells that you want to check for blank cells).
+Click on the "Format" button and choose the "Font" tab.
+Check the "Hidden" checkbox under "Effects" and click "OK" to apply the formatting.
+Click "OK" again to close the "New Formatting Rule" dialog box.
+After applying this formatting rule, any row that contains a blank cell in the selected range will be hidden from view. To unhide the rows, you can simply remove the formatting rule by going to "Conditional Formatting" > "Manage Rules" and deleting the rule that you created.
+
+
+Q6. What are the steps to hide the duplicate values using conditional formatting in
+excel?
+
+ANS=>Here are the steps to hide the duplicate values using conditional formatting in Excel:
+
+Select the range of cells that you want to check for duplicates.
+
+Click on the "Conditional Formatting" button in the "Styles" group on the "Home" tab of the ribbon.
+
+Select "Highlight Cells Rules" from the drop-down list and then click on "Duplicate Values" from the sub-menu.
+
+In the "Duplicate Values" dialog box, select the formatting option that you want to apply to the duplicate values. For example, you could select "Light Red Fill with Dark Red Text" to highlight the duplicates in red.
+
+Click on the "OK" button to apply the formatting.
+
+To hide the duplicate values, click on the "Conditional Formatting" button again and select "Manage Rules" from the drop-down list.
+
+In the "Manage Rules" dialog box, select the rule that you just created and then click on the "Edit Rule" button.
+
+In the "Edit Formatting Rule" dialog box, click on the "Format" button and then select the "Font" tab.
+
+Check the "Hidden" checkbox in the "Effects" section and then click on "OK" to close the "Font" dialog box.
+
+Click on "OK" again to close the "Edit Formatting Rule" dialog box.
+
+Finally, click on "OK" to close the "Manage Rules" dialog box.
+
+The duplicate values should now be hidden in the selected range of cells.

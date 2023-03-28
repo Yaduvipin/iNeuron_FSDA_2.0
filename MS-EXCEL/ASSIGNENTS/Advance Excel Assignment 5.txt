@@ -1,0 +1,107 @@
+Q1. How many types of conditions are available in conditional formatting on Excel?
+
+ANS=>Excel offers various types of conditions for conditional formatting. Here are some of the most commonly used types:
+
+   1.Cell Value - format cells based on their specific values, e.g., greater than, less than, equal to, between, etc.
+
+   2.Formula - format cells based on a formula that you create. You can use various functions and operators to define the condition.
+
+   3.Top/Bottom Rules - format cells based on their rank relative to other cells, such as top 10 items or bottom 5 items.
+
+   4.Data Bars - format cells with a horizontal bar that represents the cell value's size relative to other cells in the range.
+
+   5.Color Scales - format cells with a color gradient that represents the cell value's size relative to other cells in the range.
+
+   6.Icon Sets - format cells with icons that represent the cell value's size relative to other cells in the range.
+
+   7.Text - format cells based on their text content, such as contains specific text, begins with, ends with, etc.
+
+   These are just a few examples, and there are many other types of conditions available in conditional formatting on Excel.
+
+Q2. How to insert border in Excel with Format Cells dialog?
+
+ANS=>To insert a border in Excel using the Format Cells dialog, follow these steps:
+
+    Select the cells that you want to add a border to.
+
+    Right-click on the selected cells and choose "Format Cells" from the context menu.
+
+    In the Format Cells dialog box, click on the "Border" tab.
+
+    Choose the border style, color, and thickness that you want to apply to your cells. You can preview the changes in the preview section of the dialog box.
+
+   Select the location of the border in the "Presets" section, or choose "Custom" to select specific border options.
+
+   Click "OK" to apply the border to your selected cells.
+
+   Your cells should now have a border applied to them according to the options you selected in the Format Cells dialog.
+
+
+Q3. How to Format Numbers as Currency in Excel?
+
+ANS=>To format numbers as currency in Excel, follow these steps:
+
+     Select the cells that contain the numbers you want to format.
+
+    Right-click on the selected cells and choose "Format Cells" from the context menu.
+
+    In the Format Cells dialog box, click on the "Number" tab.
+
+    Choose "Currency" from the category list.
+
+    Choose the desired currency symbol from the "Symbol" drop-down list. You can also choose the decimal places you want to display, whether to use a thousands separator, and other options.
+
+    Click "OK" to apply the currency formatting to your selected cells.
+
+    Your numbers should now be formatted as currency according to the options you selected in the Format Cells dialog.
+
+Q4. What are the steps to format numbers in Excel with the Percent style?
+
+ANS=>To format numbers as a percentage in Excel, follow these steps:
+
+    Select the cells that contain the numbers you want to format.
+
+    Right-click on the selected cells and choose "Format Cells" from the context menu.
+
+    In the Format Cells dialog box, click on the "Number" tab.
+
+    Choose "Percentage" from the category list.
+
+    Choose the desired number of decimal places you want to display.
+
+    Click "OK" to apply the percentage formatting to your selected cells.
+
+    Your numbers should now be formatted as percentages according to the options you selected in the Format Cells dialog.
+
+
+Q5. What is a shortcut to merge two or more cells in excel?
+
+ANS=>The shortcut to merge two or more cells in Excel is as follows:
+
+    Select the cells you want to merge.
+
+    Press and hold the "Alt" key on your keyboard.
+
+    While holding the "Alt" key, press "H" then "M" then "M".
+
+    Release the "Alt" key.
+
+    The selected cells should now be merged into one cell with the contents centered within it.
+
+
+Q6. How do you use text commands in Excel?
+
+ANS=>In Excel, you can use text commands, also known as formulas, to perform various calculations and manipulate data. Here are the steps to use text commands  in Excel: 
+
+   Select the cell where you want to enter the text command.
+   Type an equal sign (=) to indicate that you are entering a formula.
+   Enter the text command or formula that you want to use. For example, to add two numbers together, you could type "=A1+B1" (assuming the numbers you want to add are in cells A1 and B1).
+   Press Enter to apply the formula and see the result.
+   Excel has many built-in functions and commands that you can use, such as SUM, AVERAGE, MAX, MIN, IF, and COUNT. To use these functions, type the function name followed by the arguments (the data you want to calculate) in parentheses. For example, to find the sum of a range of numbers, you could type "=SUM(A1:A10)" (assuming the numbers are in cells A1 to A10).
+
+   You can also use text commands to manipulate text, such as combining text from different cells or extracting parts of a string. Some commonly used text commands include CONCATENATE, LEFT, RIGHT, and MID.
+
+   
+
+
+

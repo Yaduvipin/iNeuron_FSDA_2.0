@@ -1,0 +1,102 @@
+Q1. Using Insert Function, give examples of any function available in the
+different dropdowns present in the function library. For example
+AutoSum, Recently Used, Text, Date & Time, etc.
+
+ANS=>Here are some examples of functions available in different dropdowns of the Insert Function library:
+
+AutoSum:
+
+SUM: Adds up a range of cells.
+AVERAGE: Calculates the average of a range of cells.
+COUNT: Counts the number of cells in a range that contain numbers.
+MAX: Returns the largest value in a range of cells.
+MIN: Returns the smallest value in a range of cells.
+
+Recently Used:
+
+VLOOKUP: Searches for a value in the first column of a table array and returns a value in the same row from a specified column.
+IF: Specifies a logical test to perform and returns one value if the test is TRUE and another value if it's FALSE.
+CONCATENATE: Joins several text strings into one text string.
+LEFT: Returns the leftmost characters from a text string.
+RIGHT: Returns the rightmost characters from a text string.
+
+
+Text:
+
+UPPER: Converts text to uppercase.
+LOWER: Converts text to lowercase.
+PROPER: Capitalizes the first letter of each word in a text string.
+TRIM: Removes leading and trailing spaces from a text string.
+SUBSTITUTE: Replaces old text with new text in a text string.
+Date & Time:
+
+TODAY: Returns the current date.
+NOW: Returns the current date and time.
+YEAR: Returns the year of a given date.
+MONTH: Returns the month of a given date.
+DAY: Returns the day of a given date.
+
+
+Q2. What are the different ways you can select columns and rows?
+
+ANS=>Click and Drag: To select a column or row, you can click and drag your mouse over the cells you want to select. For example, to select a column, click on the letter at the top of the column and drag your mouse down to the last row of the column.
+
+Shift + Arrow Keys: You can use the Shift key in combination with the arrow keys to select columns or rows. To select a column, click on any cell in the column and press Shift + Spacebar to select the entire column. To select a row, click on any cell in the row and press Shift + Arrow Keys (left or right) to select the entire row.
+
+Ctrl + Click: You can also use the Ctrl key in combination with your mouse to select multiple columns or rows that are not next to each other. To select multiple columns, hold down the Ctrl key and click on the letters at the top of the columns. To select multiple rows, hold down the Ctrl key and click on the numbers at the left of the rows.
+
+Select All: To select all columns or rows in a worksheet, click on the Select All button at the top left corner of the worksheet, which is located above row 1 and to the left of column A. Alternatively, you can press Ctrl + A to select all cells in the worksheet.
+
+Name Box: Another way to select a column or row is by using the Name Box. Click on the Name Box at the left of the formula bar and type the name of the column or row you want to select. For example, to select column B, type "B" in the Name Box and press Enter.
+
+
+Q3. What is AutoFit and why do we use it?
+
+ANS=>In Microsoft Excel, AutoFit is a feature that automatically adjusts the width or height of a cell, column, or row to fit the content within it.
+
+AutoFit is useful in Excel because it can save time and make your data easier to read and understand. For example, if you have a column of data with varying text lengths, using the AutoFit feature can ensure that all of the text is visible without having to manually adjust the column width for each cell.
+
+To use the AutoFit feature in Excel, simply select the column or row that you want to adjust and double-click on the border of the column or row. Alternatively, you can use the "AutoFit Column Width" or "AutoFit Row Height" option from the "Format" menu or the "Home" tab on the ribbon.
+
+Overall, AutoFit is a helpful tool in Excel that can streamline the formatting process and improve the readability of your data.
+
+
+Q4. How can you insert new rows and columns into the existing table?
+
+ANS=>You can easily insert new rows and columns into an existing table in Microsoft Excel using the following steps:
+
+Select the row or column where you want to insert the new row or column. To select a column, click on the column letter at the top of the column. To select a row, click on the row number at the left of the row.
+
+Right-click on the selected row or column, and then select "Insert" from the context menu. This will insert a new row or column above or to the left of the selected row or column.
+
+Alternatively, you can use the "Insert" command on the "Home" tab of the ribbon. First, select the row or column where you want to insert the new row or column. Then, click on the "Insert" button in the "Cells" group on the "Home" tab. This will open a dropdown menu where you can select "Insert Sheet Rows" or "Insert Sheet Columns" to insert a new row or column.
+
+If you want to insert multiple rows or columns at once, select the same number of rows or columns as you want to insert. Then, right-click on the selection and choose "Insert" from the context menu or use the "Insert" command on the "Home" tab as described above.
+
+Once you have inserted the new row or column, you can enter data or formulas as usual. The table will automatically adjust to include the new row or column.
+
+
+Q5. How do you hide and unhide columns in excel?
+
+ANS=>To hide a column in Excel, follow these steps:
+
+Select the column(s) that you want to hide.
+Right-click on the selected column(s) and choose "Hide" from the drop-down menu.
+Alternatively, you can also use the keyboard shortcut "Ctrl + 0" (zero) to hide the selected column(s).
+To unhide a column in Excel, follow these steps:
+
+Select the adjacent columns to the hidden column(s).
+Right-click on the selected columns and choose "Unhide" from the drop-down menu.
+Alternatively, you can also use the keyboard shortcut "Ctrl + Shift + 0" (zero) to unhide the selected column(s).
+If you want to unhide a column but do not know which columns are hidden, you can use the "Go To" feature to find them:
+
+Press "Ctrl + G" on your keyboard to open the "Go To" dialog box.
+In the "Reference" field, type the cell reference of the hidden column(s) (e.g. A:A).
+Click "OK".
+The hidden column(s) will be selected. Follow the steps above to unhide them.
+
+
+Q6. Create an appropriate table within the worksheet and use different
+    functions available in the AutoSum command.
+
+ANS=>https://1drv.ms/x/s!AhNzYBgScDKLhY1X4aAK8Emg9jr2HA?e=t8I9vK

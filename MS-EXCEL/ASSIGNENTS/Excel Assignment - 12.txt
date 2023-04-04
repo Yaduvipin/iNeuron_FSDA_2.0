@@ -1,0 +1,16 @@
+1. What is the total amount of stationary bought from Madhya Pradesh?
+
+ANS=>TOTAL AMOUNT = 1,76,971
+     
+2. What is the total count of stationary bought from Tamilnadu?
+
+ANS=> 13
+3. What is the total amount spent on footwear?
+
+ANS=1,94,226
+4. What is the total amount of money spent for stationary in July?
+
+ANS=>53,398
+5. What is the count of footwear that is coming from Delhi?
+
+ANS=> 2

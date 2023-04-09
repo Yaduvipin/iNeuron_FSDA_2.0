@@ -1,0 +1,198 @@
+Q1. Write a VBA code to enter your name in A1 Cell using Input Box and
+once you enter the name display a message box that says the name
+has been entered.
+
+ANS=>Here's an example VBA code that prompts the user to enter their name using an Input Box, then enters their name into cell A1 and displays a message box confirming that the name has been entered:
+
+Sub EnterName()
+    Dim name As String
+    name = InputBox("Please enter your name:")
+    Range("A1").Value = name
+    MsgBox "Your name has been entered."
+End Sub
+In this code, the variable "name" is declared as a string and is set to the value entered by the user using the InputBox function. The value of "name" is then entered into cell A1 using the Range("A1").Value property, and a message box is displayed using the MsgBox function to confirm that the name has been entered.
+
+To run this code, you would need to open the VBA editor in Excel, paste the code into a new module, and then run the "EnterName" subroutine. When you run the subroutine, an Input Box will appear prompting you to enter your name. Once you enter your name, it will be entered into cell A1 and a message box will appear confirming that your name has been entered.
+
+
+Q2. What are Userforms? Why are they used? How to fill a list box using
+for loop.
+
+ANS=>Userforms are graphical interfaces that can be created in VBA to display information to the user, prompt them for input, and provide an interactive experience. They are used to create custom dialog boxes, data entry forms, and other types of user interfaces that are not available in Excel's built-in functionality.
+
+Userforms can contain various controls such as text boxes, buttons, labels, check boxes, radio buttons, and list boxes. They can be customized to fit the needs of the user and can greatly enhance the user's experience with the application.
+
+Here's an example of how to fill a list box in a userform using a for loop:
+
+Assuming that you have a UserForm named "myUserForm" and a ListBox named "myListBox" on the UserForm, you can use the following code to fill the list box with a series of numbers using a for loop:
+
+Private Sub UserForm_Initialize()
+    Dim i As Integer
+    
+    For i = 1 To 10
+        myListBox.AddItem i
+    Next i
+End Sub
+In this code, the UserForm_Initialize event is used to initialize the UserForm when it is loaded. The for loop runs from 1 to 10 and adds each number to the list box using the AddItem method. When the UserForm is loaded, the list box will be filled with the numbers 1 to 10.
+
+Overall, Userforms are a powerful tool in VBA that can greatly enhance the user's experience with your application. They can be customized to fit the needs of the user and can provide a more intuitive and user-friendly interface.
+
+
+Q3. What is an array? Write a VBA code to enter students and their marks
+from the below table.
+
+ANS=> An array is a data structure in VBA that allows you to store a collection of values of the same data type in a single variable. Arrays are useful when you need to work with multiple values that are related to each other, such as a list of students and their marks.
+
+Here's an example VBA code that uses an array to enter students and their marks from a table:
+
+Sub EnterMarks()
+    Dim students(1 To 5, 1 To 2) As String ' 5 students with 2 fields: Name and Marks
+    
+    ' Enter student names and marks
+    students(1, 1) = "John"
+    students(1, 2) = "80"
+    students(2, 1) = "Jane"
+    students(2, 2) = "90"
+    students(3, 1) = "Bob"
+    students(3, 2) = "70"
+    students(4, 1) = "Alice"
+    students(4, 2) = "85"
+    students(5, 1) = "Tom"
+    students(5, 2) = "75"
+    
+    ' Print the student names and marks to the Immediate Window
+    Dim i As Integer
+    For i = 1 To 5
+        Debug.Print "Student " & i & ": " & students(i, 1) & " - Marks: " & students(i, 2)
+    Next i
+End Sub
+In this code, an array named "students" is declared with 5 rows and 2 columns, where each row represents a student and each column represents either the student's name or their marks. The student names and marks are then entered into the array using the array indices, and a for loop is used to print the student names and marks to the Immediate Window.
+
+When you run this code, it will print the following output to the Immediate Window:
+
+Student 1: John - Marks: 80
+Student 2: Jane - Marks: 90
+Student 3: Bob - Marks: 70
+Student 4: Alice - Marks: 85
+Student 5: Tom - Marks: 75
+Overall, arrays are a powerful tool in VBA that can be used to store and manipulate large amounts of related data. They are commonly used for tasks such as sorting, searching, and filtering data, and can greatly simplify complex programming tasks.
+
+
+Q4. Use the following data to create a pie chart using VBA code. Use Font
+- ‘Times new Roman’, Size -14, Bold, Title - Piechart’ and you are per
+to use colours as per your taste.
+
+ANS=>Here's the VBA code to create a pie chart using the given data and formatting:
+
+
+Sub CreatePieChart()
+
+    ' Declare variables
+    Dim chartRange As Range
+    Dim chartTitle As String
+    Dim chartFont As String
+    Dim chartFontSize As Integer
+    Dim chartFontBold As Boolean
+    
+    ' Set chart data range
+    Set chartRange = ThisWorkbook.Sheets("Sheet1").Range("A1:B4")
+    
+    ' Set chart title and font properties
+    chartTitle = "Pie Chart"
+    chartFont = "Times New Roman"
+    chartFontSize = 14
+    chartFontBold = True
+    
+    ' Create a new chart sheet
+    Dim chartSheet As Chart
+    Set chartSheet = ThisWorkbook.Charts.Add
+    
+    ' Set chart title and font properties
+    chartSheet.HasTitle = True
+    chartSheet.ChartTitle.Text = chartTitle
+    chartSheet.ChartTitle.Font.Name = chartFont
+    chartSheet.ChartTitle.Font.Size = chartFontSize
+    chartSheet.ChartTitle.Font.Bold = chartFontBold
+    
+    ' Set chart type to pie chart
+    chartSheet.ChartType = xlPie
+    
+    ' Set chart data range and series labels
+    chartSheet.SetSourceData Source:=chartRange
+    chartSheet.SeriesCollection(1).XValues = chartRange.Columns(1)
+    
+    ' Set chart colors
+    chartSheet.SeriesCollection(1).Points(1).Format.Fill.ForeColor.RGB = RGB(255, 0, 0) ' Red
+    chartSheet.SeriesCollection(1).Points(2).Format.Fill.ForeColor.RGB = RGB(0, 255, 0) ' Green
+    chartSheet.SeriesCollection(1).Points(3).Format.Fill.ForeColor.RGB = RGB(0, 0, 255) ' Blue
+    chartSheet.SeriesCollection(1).Points(4).Format.Fill.ForeColor.RGB = RGB(255, 255, 0) ' Yellow
+    
+    ' Set chart font properties
+    chartSheet.ChartArea.Font.Name = chartFont
+    chartSheet.ChartArea.Font.Size = chartFontSize
+    chartSheet.ChartArea.Font.Bold = chartFontBold
+    
+End Sub
+This code creates a new chart sheet, sets the chart type to a pie chart, sets the data range and series labels, sets the chart title and font properties, and sets the colors and font properties for the chart. Note that you can change the colors to your taste by modifying the RGB values.
+
+
+Q5. Check the dataset in the link given below and create a pivot table using
+VBA showing the sales for the year from stationary category.
+https://docs.google.com/spreadsheets/d/1IRSEnmgz8Ro276-
+GslknRNk0zlrB5CZH1YrnT71kqFM/edit?usp=sharing
+
+ A worksheet named "SalesData" and the category is in column A, the date is in column B, and the sales amount is in column C, you can use the following VBA code to create a pivot table that shows the sales for the year from the stationary category:
+
+Sub CreatePivotTable()
+    Dim ws As Worksheet
+    Dim pc As PivotCache
+    Dim pt As PivotTable
+    
+    Set ws = ThisWorkbook.Sheets("SalesData")
+    
+    'Create a Pivot Cache
+    Set pc = ThisWorkbook.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=ws.Range("A1:C" & ws.Cells(ws.Rows.Count, 1).End(xlUp).Row))
+    
+    'Create a Pivot Table
+    Set pt = pc.CreatePivotTable(TableDestination:=ws.Range("E3"), TableName:="StationarySalesPivotTable")
+    
+    'Add Fields to Pivot Table
+    With pt
+        'Add Category to Row Labels
+        .PivotFields("Category").Orientation = xlRowField
+        'Add Year to Column Labels
+        .PivotFields("Date").Orientation = xlColumnField
+        .PivotFields("Date").NumberFormat = "yyyy"
+        'Add Sales to Values
+        .AddDataField .PivotFields("Sales"), "Sales Amount", xlSum
+        'Filter for Stationary Category
+        .PivotFields("Category").CurrentPage = "Stationary"
+    End With
+    
+End Sub
+
+
+Q6. Write step by step procedure to protect your workbook using a
+password.
+
+ANS=>Here is the step-by-step procedure to protect your workbook using a password in Microsoft Excel:
+
+ Open the workbook you want to protect.
+
+ Click on the "File" tab at the top left corner of the window.
+
+ Click on "Info" in the left-hand pane.
+
+ Click on "Protect Workbook" and select "Encrypt with Password."
+
+ Enter a strong password in the "Encrypt Document" dialog box.
+
+ Click "OK" to confirm the password.
+
+ Re-enter the password to confirm it.
+
+ Save the workbook.
+
+ Close and reopen the workbook to check if the password protection is working correctly.
+
+Your workbook is now protected with a password. Whenever anyone tries to open the workbook, they will be prompted to enter the password. Without the correct password, the workbook will remain locked and inaccessible.

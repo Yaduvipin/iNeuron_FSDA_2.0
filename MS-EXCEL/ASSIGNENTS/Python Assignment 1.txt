@@ -1,0 +1,113 @@
+Q.1. In the below elements which of them are values or an expression? eg:- values can be
+integer or string and expressions will be mathematical operators.
+*
+'hello'
+-87.8
+-
+/
++
+6
+
+ANS=>
+   "*" is an expression representing multiplication operator.
+   "'hello'" is a value representing a string.
+   "-87.8" is a value representing a negative floating-point number.
+   "-" is an expression representing subtraction operator.
+   "/" is an expression representing division operator.
+   "+" is an expression representing addition operator.
+   "6" is a value representing a positive integer.
+   
+Q.2.What is the difference between string and variable?
+
+
+
+ANS=>A string is a sequence of characters enclosed in quotation marks. It represents a piece of text or a message and is a type of data in programming.
+
+A variable, on the other hand, is a container that stores a value or a reference to a value. It is a named memory location that holds a value or an object. A variable can hold different types of data, such as strings, numbers, and other objects.
+
+In simpler terms, a string is a type of data, whereas a variable is a named storage location that can hold any type of data, including strings.
+
+For example, in the Python programming language, we can assign a string "Hello, World!" to a variable named message as follows:
+
+
+message = "Hello, World!"
+Here, message is a variable that holds the value "Hello, World!", which is a string. We can use the variable message to refer to the string "Hello, World!" throughout our code.
+
+Q.3. Describe three different data types.
+
+ANS=>Integer: An integer is a numeric data type that represents whole numbers, both positive and negative. In programming, integers are often used for counting and indexing purposes. Examples of integers include -1, 0, 1, 2, 3, and so on.
+
+String: A string is a sequence of characters that represents text. In programming, strings are often used to store messages, names, and other textual data. Strings are typically enclosed in quotation marks, either single or double. Examples of strings include "hello", "world", "123", and so on.
+
+Boolean: A boolean is a logical data type that represents true or false values. In programming, booleans are often used for making decisions based on the result of a comparison or a condition. Examples of booleans include True and False.
+
+There are many other data types used in programming, including floating-point numbers, arrays, dictionaries, and more. Each data type has its own set of operations and behaviors, and they are used in different ways depending on the requirements of the program.
+
+
+Q.4.What is an expression made up of? What do all expressions do?
+
+ANS=>An expression is a combination of values, variables, and operators that can be evaluated to produce a result. An expression can be as simple as a single value, such as 42, or as complex as a nested combination of operators and operands.
+
+In general, all expressions in programming serve the purpose of computing a value. They can be used to perform mathematical operations, manipulate strings, evaluate conditions, or perform other types of computations depending on the programming language and the context in which they are used.
+
+An expression can contain the following components:
+
+Values: These are the actual data or literals that are used in the expression. Examples include numbers, strings, and boolean values.
+
+Variables: These are named storage locations that hold values or references to values. Variables can be used in expressions to represent data or to store the result of a computation.
+
+Operators: These are symbols or keywords that perform operations on values or variables. Examples of operators include arithmetic operators like +, -, *, and /, comparison operators like <, >, and ==, and logical operators like and, or, and not.
+
+Functions: These are named procedures or subroutines that perform specific tasks. Functions can be used in expressions to manipulate data or to perform more complex computations.
+
+All expressions in programming are evaluated based on the order of precedence of the operators and the data types involved. The result of an expression can be a value of any data type, depending on the nature of the expression and the types of the operands involved.
+
+Q.5.This assignment statements, like spam = 10. What is the difference between an
+expression and a statement?
+
+ANS=>In programming, an expression is a combination of values, variables, and operators that can be evaluated to produce a value. Examples of expressions include:
+
+3 + 4
+"hello" + "world"
+x * y
+In contrast, a statement is a complete line of code that performs a specific action. Examples of statements include:
+
+spam = 10
+print("Hello, World!")
+if x > y: print("x is greater than y")
+In other words, an expression is a part of a statement that produces a value, whereas a statement is a complete line of code that performs an action or a sequence of actions.
+
+In the example spam = 10, spam = 10 is a statement that assigns the value 10 to the variable spam. The expression here is just the value 10.
+
+In summary, expressions produce values, while statements perform actions.
+
+Q.6.After running the following code, what does the variable bacon contain?
+bacon = 22
+bacon + 1
+
+ANS=>After running the following code, the variable bacon contains the value 22. The expression bacon + 1 evaluates to 23, but this value is not assigned to any variable, so it is not stored anywhere.
+
+If you want to update the value of bacon to the result of the expression bacon + 1, you need to assign it back to bacon as follows:
+
+
+bacon = 22
+bacon = bacon + 1
+print(bacon)   # Output: 23
+Here, we first assign the value 22 to the variable bacon. Then, we update the value of bacon to the result of the expression bacon + 1, which is 23. Finally, we print the value of bacon, which is now 23.
+
+
+Q.7.What should the values of the following two terms be?
+'spam' + 'spamspam'
+ spam * 3
+ 
+ ANS=>The value of 'spam' + 'spamspam' would be the string 'spamspamspam', which is the concatenation of the two strings 'spam' and 'spamspam'.
+
+The value of spam * 3 would depend on the value of the variable spam. If spam is a string, then the expression spam * 3 would concatenate three copies of the string 'spam' together, resulting in the string 'spamspamspam'. If spam is a numeric variable, then the expression spam * 3 would multiply the value of spam by 3.
+
+
+
+Q.8. Why is eggs a valid variable name while 100 is invalid?
+
+ANS=>In Python, variable names can consist of letters, numbers, and underscores, but they must follow certain rules. Specifically, variable names must start with a letter or an underscore, and they cannot start with a number. This is why "eggs" is a valid variable name - it starts with a letter.
+
+On the other hand, "100" is not a valid variable name because it starts with a number, not a letter or an underscore. Variable names cannot start with a number in Python, which is why "100" is not a valid variable name. However, it is possible to include numbers within a variable name, as long as the name starts with a letter or an underscore. For example, "eggs100" would be a valid variable name in Python.

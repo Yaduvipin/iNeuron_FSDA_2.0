@@ -111,3 +111,25 @@ Q.8. Why is eggs a valid variable name while 100 is invalid?
 ANS=>In Python, variable names can consist of letters, numbers, and underscores, but they must follow certain rules. Specifically, variable names must start with a letter or an underscore, and they cannot start with a number. This is why "eggs" is a valid variable name - it starts with a letter.
 
 On the other hand, "100" is not a valid variable name because it starts with a number, not a letter or an underscore. Variable names cannot start with a number in Python, which is why "100" is not a valid variable name. However, it is possible to include numbers within a variable name, as long as the name starts with a letter or an underscore. For example, "eggs100" would be a valid variable name in Python.
+
+Q.9. What three functions can be used to get the integer, floating-point number, or string
+version of a value?
+
+ANS=>In Python, the following functions can be used to convert a value to a specific type:
+
+int(): This function can be used to convert a value to an integer. If the value is a string, the function tries to parse the string and convert it to an integer. If the value is a floating-point number, the function truncates it to an integer.
+
+float(): This function can be used to convert a value to a floating-point number. If the value is a string, the function tries to parse the string and convert it to a floating-point number. If the value is an integer, the function converts it to a floating-point number.
+
+str(): This function can be used to convert a value to a string. If the value is an integer or a floating-point number, the function converts it to a string representation of the number. If the value is already a string, the function returns the string as is.
+
+Q.10.Why does this expression cause an error? How can you fix it?
+ 'I have eaten'  + 99 + 'burritos'
+ 
+ANS=>The expression causes an error because it is trying to concatenate a string and a number using the + operator. In Python, the + operator is used for both string concatenation and addition, depending on the types of the operands. When one operand is a string and the other is a number, Python does not know how to handle the operation and raises a TypeError exception.
+
+To fix this error, we need to ensure that all operands are of the same type. One way to do this is to convert the number to a string using the str() function before concatenating it with the other strings. For example, we can rewrite the expression as follows:
+
+
+'I have eaten ' + str(99) + ' burritos'
+In this version of the expression, the number 99 is converted to a string using the str() function before being concatenated with the other strings. This ensures that all operands are strings, and the expression should execute without error.

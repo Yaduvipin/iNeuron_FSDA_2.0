@@ -1,0 +1,118 @@
+use database ineuron_fsda_assignment;
+
+-- TASK 1
+--Write an SQL that ,for each "product ",returns the total amount of money spent on it.Rows should be ordered in descending alphabetical order by "product". 
+
+CREATE TABLE shopping_history(
+    product varchar not null,
+    quantity integer not null,
+    unit_price integer not null
+);
+
+INSERT INTO shopping_history VALUES
+('apple',5,10),
+('banana',7,12),
+('mango',2,25),
+('apple',7,5),
+('banana',3,7),
+('mango',4,9),
+('apple',7,11),
+('cherry',6,2),
+('papaya',4,13),
+('cherry',7,17);
+
+SELECT * FROM shopping_history;
+SELECT DISTINCT product,sum(total_price) AS TOTAL_PRICE FROM
+(SELECT  product ,quantity*unit_price AS total_price FROM shopping_history) GROUP BY product;
+
+-- TASK 2
+
+
+CREATE TABLE phones(
+    name varchar(20) not null unique,
+    phone_number integer not null unique);
+    
+
+
+
+INSERT INTO phones VALUES 
+('john',10000),
+('kavin',11111),
+('david',22222),
+('stonis',33333),
+('lee',44444),
+('johnson',55555),
+('sam',66666),
+('marsh',77777),
+('caran',88888),
+('smith',99999);
+
+SELECT * FROM phones;
+
+
+
+
+CREATE TABLE calls(
+    id integer not null,
+    caller integer not null,
+    callee integer not null,
+    duration integer not null,
+    unique(id));
+
+
+INSERT INTO calls VALUES 
+(1,10000,55555,3),
+(2,10000,33333,2),
+(3,11111,22222,4),
+(4,77777,33333,1),
+(5,99999,77777,6),
+(6,33333,10000,3),
+(7,22222,66666,8),
+(8,88888,11111,3),
+(9,10000,22222,4),
+(10,77777,22222,6);
+
+SELECT * FROM calls;
+
+
+-- Write an SQL query that finds all clients who talked for at least 10 minutes in total. The table of results should contain one column : the name of the client(name). Row should be sorted alphabetically
+
+--We find this with the help of CTE(Common Table Exepration)
+
+with call_duration as 
+(
+    select caller as phone_number ,sum(duration) as duration from calls group by caller
+    union all
+    select callee  as phone_number, sum(duration) as duration from calls group by callee
+)
+select name from phones P left outer join call_duration CD on P.phone_number=CD.phone_number
+group by name
+having sum(duration)>10
+order by name;
+
+
+--TASK 3
+--Write an SQL query that returns a table containing one column,balance.The table should contain one row with the total balance of your account at the end of the year,includeing the fee of holding a credit card?
+
+CREATE TABLE  `transactions`
+(
+    amount integer not null,
+    date date not null
+);
+
+
+INSERT INTO `TRANSACTIONS` VALUES 
+(1000,'2020-01-06'),
+(-10,'2020-01-14'),
+(-75,'2020-01-20'),
+(-5,'2020-01-25'),
+(-4,'2020-01-29'),
+(2000,'2020-03-10'),
+(-75,'2020-03-12'),
+(-20,'2020-03-15'),
+(40,'2020-03-15'),
+(-50,'2020-03-17'),
+(200,'2020-10-10'),
+(-200,'2020-10-10');
+
+SELECT *  FROM `TRANSACTIONS`;

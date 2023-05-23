@@ -1,0 +1,125 @@
+/* Question  1
+ Evaluate the median severity value of accidents caused by various Motorcycles*/
+ 
+ 
+select a.Accident_Severity,vt.vehicle_type, 
+row_number() over(order by Accident_Severity ) as 'row2',
+row_number() over(order by Accident_Severity desc) as 'row1'
+from accidents a 
+left outer join vehicles v on a.Accident_Index=v.Accident_Index
+left outer join vehicle_types vt on v.vehicle_code=vt.vehicle_code
+where vehicle_type like "%motorcycle%"
+order by a.Accident_Severity
+;
+
+/*      2. Question-
+ Evaluate Accident Severity and Total Accidents per Vehicle Type  */
+
+
+select vt.vehicle_type,a.Accident_Severity as Severity,count(vt.vehicle_type) as Total_Accident 
+from accidents a 
+join vehicles v on a.Accident_Index=v.Accident_Index 
+join vehicle_types vt on v.vehicle_code=vt.vehicle_code
+group by 1
+order by 2,3
+;
+
+
+
+/*    3.Question-
+ Calculate the Average Severity by vehicle type. */
+
+
+ select vt.vehicle_type,avg(a.Accident_Severity) as Average_Accident_Severity
+from accidents a 
+left outer join vehicles v on a.Accident_Index=v.Accident_Index
+left outer join vehicle_types vt on v.vehicle_code=vt.vehicle_code
+group by vehicle_type order by Average_Accident_Severity;
+
+
+
+/*           4.Question-
+     Calculate the Average Severity and Total Accidents by Motorcycle*/
+
+
+ select vt.vehicle_type,avg(a.Accident_Severity) as Average_Accident_Severity ,count(vt.vehicle_type) as total_Accident
+from accidents a 
+left outer join vehicles v on a.Accident_Index=v.Accident_Index
+left outer join vehicle_types vt on v.vehicle_code=vt.vehicle_code
+where vt.vehicle_type like "%Motorcycle%"
+group by vehicle_type order by Average_Accident_Severity;
+
+
+
+
+
+
+#Create Database
+
+create database World_Population;
+
+# Use Database
+use World_Population;
+
+#Create Table
+CREATE TABLE `World_population` (
+	country VARCHAR(45) NOT NULL, 
+	area DECIMAL(38, 0), 
+	birth_rate DECIMAL(38, 2), 
+	death_rate DECIMAL(38, 2), 
+	infant_mortality_rate DECIMAL(38, 2), 
+	internet_users DECIMAL(38, 0), 
+	life_exp_at_birth DECIMAL(38, 2), 
+	maternal_mortality_rate DECIMAL(38, 0), 
+	net_migration_rate DECIMAL(38, 2), 
+	population int, 
+	population_growth_rate DECIMAL(38, 2)
+);
+
+# Load data into table 
+
+load data infile
+'D:/World_population.csv'
+into table world_population
+fields terminated by ','
+enclosed by '"'
+lines terminated by '\n'
+ignore 1 rows;
+
+
+#Call all the records from table
+
+select * from world_population;
+
+
+
+/* Question 1.
+ Which country has the highest population?*/
+ select country from world_population order by population desc limit 1;
+
+ 
+/* Question 2. 
+Which country has the least number of people?*/
+select country from world_population order by population  limit 1;
+
+
+/* Question 3.
+ Which country is witnessing the highest population growth? */
+ select country from world_population order by population_growth_rate desc limit 1;
+
+ 
+/* Question 4. 
+Which country has an extraordinary number for the population? */
+select country from world_population order by population desc limit 1;
+
+
+
+
+/* Question 5. 
+Which is the most densely populated country in the world?*/
+select country from 
+ (select *,population/area as densely_populated from world_population
+ order by densely_populated desc) as densely_population_country limit 1;
+ 
+ 
+ 
